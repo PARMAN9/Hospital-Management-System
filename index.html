@@ -2,27 +2,22 @@
 <html>
 
 <head>
-    <title>Hospital Management System</title>
+    <title>Hospital management system </title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <h1> Web Dev Hospital</h1>
-
-        <nav>
-            <a href="#about">About</a> |
+        <nav> <a href="#about">About</a> |
+            <a href="#services">Our Services</a> |
             <a href="#register">Registration</a>
         </nav>
     </header>
-
     <main>
-
         <section id="about">
-            <h2>About Hospital</h2>
-            <p>
-                Web Dev Hospital provides quality healthcare services.
-
-            </p>
+            <h2>About Us</h2>
+            <p>Web Dev Hospital provides quality healthcare services.</p>
         </section>
         <section id="services">
             <h2>Our Services</h2>
@@ -34,25 +29,18 @@
                 <li>Surgery</li>
             </ul>
         </section>
-
         <section id="register">
             <h3>Patient Registration</h3>
-
             <form action="/register" method="POST">
-
                 <label>Patient Name:</label>
-                <input type="text" name="name">
-                <br><br>
-
+                <input type="text" name="name"> <br><br>
                 <label>Age:</label>
-                <input type="number" name="age">
-                <br><br>
-
+                <input type="number" name="age"> <br><br>
                 <input type="submit" value="Register">
-
+            </form>
         </section>
     </main>
-    </form>
+
 
 </body>
 
