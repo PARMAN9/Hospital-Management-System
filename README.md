@@ -1,2 +1,10 @@
-About
-I've used only Html and backend to make this thing run, Just a basic version which i made during my mern training.
+Hospital Management System
+
+A basic Hospital Management System built using HTML, CSS, Node.js, and Express.
+
+Features
+Patient Registration
+Appointment Date Selection
+View All Registered Patients
+Responsive and Clean User Interface
+Simple Backend using Express.js
