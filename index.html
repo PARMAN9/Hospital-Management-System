@@ -2,25 +2,34 @@
 <html>
 
 <head>
-    <title>Hospital management system </title>
+    <title>Hospital Management System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1> Web Dev Hospital</h1>
-        <nav> <a href="#about">About</a> |
-            <a href="#services">Our Services</a> |
+
+    <div class="container">
+
+        <h1>Web Dev Hospital</h1>
+
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#services">Our Services</a>
             <a href="#register">Registration</a>
         </nav>
-    </header>
-    <main>
+
         <section id="about">
             <h2>About Us</h2>
-            <p>Web Dev Hospital provides quality healthcare services.</p>
+            <p>
+                Web Dev Hospital is committed to providing quality healthcare services
+                with experienced doctors and modern facilities. Our mission is to ensure
+                the well-being of every patient.
+            </p>
         </section>
+
         <section id="services">
             <h2>Our Services</h2>
+
             <ul>
                 <li>Emergency Care</li>
                 <li>General Checkup</li>
@@ -29,18 +38,37 @@
                 <li>Surgery</li>
             </ul>
         </section>
-        <section id="register">
-            <h3>Patient Registration</h3>
-            <form action="/register" method="POST">
-                <label>Patient Name:</label>
-                <input type="text" name="name"> <br><br>
-                <label>Age:</label>
-                <input type="number" name="age"> <br><br>
-                <input type="submit" value="Register">
-            </form>
-        </section>
-    </main>
 
+        <section id="register">
+            <h2>Patient Registration</h2>
+
+            <form action="/register" method="POST">
+
+                <label>Patient Name</label><br>
+                <input type="text" name="name" required>
+                <br><br>
+
+                <label>Age</label><br>
+                <input type="number" name="age" required>
+                <br><br>
+
+                <label>Appointment Date</label><br>
+                <input type="date" name="date" required>
+                <br><br>
+
+                <input type="submit" value="Register Patient">
+
+            </form>
+
+            <br>
+
+            <a href="/patients">
+                <button>View All Patients</button>
+            </a>
+
+        </section>
+
+    </div>
 
 </body>
 
