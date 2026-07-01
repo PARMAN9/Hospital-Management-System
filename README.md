@@ -1,6 +1,6 @@
 Hospital Management System
 
-A basic Hospital Management System built using HTML, CSS, Node.js, and Express.
+A basic Hospital Management System built using HTML, CSS, Node.js,Express,Mongodb.
 
 Features
 Patient Registration
