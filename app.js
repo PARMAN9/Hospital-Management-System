@@ -8,7 +8,6 @@ const PORT = process.env.PORT || 3000;
 
 
 mongoose.connect(process.env.MONGO_URI)
-    
 
 .then(() => {
     console.log("MongoDB Connected");
@@ -16,6 +15,7 @@ mongoose.connect(process.env.MONGO_URI)
 .catch((err) => {
     console.log(" Connection Error:", err);
 });
+
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -87,6 +87,7 @@ app.get("/patients", async (req, res) => {
                     <th>Name</th>
                     <th>Age</th>
                     <th>Appointment Date</th>
+                    <th>Action</th>
                 </tr>
         `;
 
@@ -97,6 +98,11 @@ app.get("/patients", async (req, res) => {
                     <td>${patient.name}</td>
                     <td>${patient.age}</td>
                     <td>${patient.date}</td>
+                    <td>
+                        <form action="/delete/${patient._id}" method="POST">
+                            <button type="submit" class="delete-btn">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             `;
 
@@ -128,6 +134,22 @@ app.get("/patients", async (req, res) => {
 
 });
 
+
+app.post("/delete/:id", async (req, res) => {
+
+    try {
+
+        await Patient.findByIdAndDelete(req.params.id);
+        res.redirect("/patients");
+
+    } catch (error) {
+
+        console.log(error);
+        res.send("Error deleting patient.");
+
+    }
+
+});
 
 
 app.listen(3000, () => {
